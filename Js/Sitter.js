@@ -51,13 +51,16 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #45a049;
 }
+.error {
+    color: red;
+}
 </style>
 </head>
 <body>
 
 <div class="container">
     <h1>Sitter Form</h1>
-    <form>
+    <form id="sitterForm">
         <label for="name">Sitter's Name:</label>
         <input type="text" id="name" name="name" required>
 
@@ -73,61 +76,6 @@ input[type="submit"]:hover {
         <input type="submit" value="Submit">
     </form>
 </div>
-
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-}
-.container {
-    max-width: 500px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-    text-align: center;
-    color: #333;
-}
-form {
-    margin-top: 20px;
-}
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-}
-input[type="text"], input[type="number"], input[type="tel"], textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-input[type="submit"]:hover {
-    background-color: #45a049;
-}
-.error {
-    color: red;
-}
-</style>
-</head>
-<body>
-
 
 <script>
 document.getElementById('sitterForm').addEventListener('submit', function(event) {
@@ -155,7 +103,6 @@ document.getElementById('sitterForm').addEventListener('submit', function(event)
     // You can also submit the form data to a server using AJAX if needed
 });
 </script>
-
 
 </body>
 </html>
