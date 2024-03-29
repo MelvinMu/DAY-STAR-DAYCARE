@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -129,33 +129,81 @@ input[type="submit"]:hover {
 <body>
 
 
-<script>
-document.getElementById('sitterForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
 
-    // Get form values
-    var name = document.getElementById('name').value;
-    var age = document.getElementById('age').value;
-    var number = document.getElementById('number').value;
-    var address = document.getElementById('address').value;
+<script src="Sitter.js"></script>
 
-    // Perform validation (You can customize validation as per your requirements)
-    if (!name || !age || !number || !address) {
-        alert('Please fill in all fields');
-        return;
-    }
-
-    // If all fields are filled, you can process the data here
-    // For demonstration, let's just log the values
-    console.log('Sitter Name:', name);
-    console.log('Sitter Age:', age);
-    console.log('Sitter Number:', number);
-    console.log('Sitter Address:', address);
-
-    // You can also submit the form data to a server using AJAX if needed
-});
-</script>
-
-
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitter's Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sitter's Page</h1>
+        <form>
+            <label for="name">Sitter's Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter sitter's name...">
+            <label for="email">Email Address:</label>
+            <input type="text" id="email" name="email" placeholder="Enter email address...">
+            <label for="timeIn">Time In:</label>
+            <input type="text" id="timeIn" name="timeIn" placeholder="Enter time in...">
+            <label for="timeOut">Time Out:</label>
+            <input type="text" id="timeOut" name="timeOut" placeholder="Enter time out...">
+            <a href="sitters dashboard.html">LOGIN</a>
+        </form>
+    </div>
 </body>
 </html>
