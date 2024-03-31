@@ -1,6 +1,6 @@
 .mel {
-    color:brown;
-    font-size: xx-large;
+    color:blue;
+    font-size: 100px;
     text-align: center;
 }
 #yap {
@@ -11,6 +11,17 @@
     top: 50%;
     left: 50%; 
     transform: translate(-50%, -50%);
+}
+#wow {
+    color:red;
+    font-size: 100px;
+}
+.bubbles {
+    color:aqua;
+}
+#woo {
+    color:aquamarine;
+    font-size: larger;
 }
 
  

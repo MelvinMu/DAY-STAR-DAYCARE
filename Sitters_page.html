@@ -1,139 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sitter Form</title>
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-}
-.container {
-    max-width: 500px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-    text-align: center;
-    color: #333;
-}
-form {
-    margin-top: 20px;
-}
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-}
-input[type="text"], input[type="number"], input[type="tel"], textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-input[type="submit"]:hover {
-    background-color: #45a049;
-}
-</style>
-</head>
-<body>
 
-<div class="container">
-    <h1>Sitter Form</h1>
-    <form>
-        <label for="name">Sitter's Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="age">Sitter's Age:</label>
-        <input type="number" id="age" name="age" required>
-
-        <label for="number">Sitter's Number:</label>
-        <input type="tel" id="number" name="number" pattern="[0-9]{10}" required>
-
-        <label for="address">Sitter's Address:</label>
-        <textarea id="address" name="address" rows="4" required></textarea>
-
-        <input type="submit" value="Submit">
-    </form>
-</div>
-
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-}
-.container {
-    max-width: 500px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-    text-align: center;
-    color: #333;
-}
-form {
-    margin-top: 20px;
-}
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-}
-input[type="text"], input[type="number"], input[type="tel"], textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-input[type="submit"]:hover {
-    background-color: #45a049;
-}
-.error {
-    color: red;
-}
-</style>
-</head>
-<body>
-
-
-
-<script src="Sitter.js"></script>
-
-</body>
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -141,12 +6,18 @@ input[type="submit"]:hover {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitter's Page</title>
     <style>
-        body {
+        /* body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-        }
+        } */
+        body {
+  background-image: url('images/day.jpg'); /* Specify the path to your image */
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Position the background image at the center */
+  /* You can also use additional background properties such as repeat, attachment, etc. */
+}
         .container {
             width: 80%;
             margin: 20px auto;
@@ -202,8 +73,11 @@ input[type="submit"]:hover {
             <input type="text" id="timeIn" name="timeIn" placeholder="Enter time in...">
             <label for="timeOut">Time Out:</label>
             <input type="text" id="timeOut" name="timeOut" placeholder="Enter time out...">
+            <label for="Sitter's Number">Sitter's Number:</label>
+            <input type="text" id="Sitter's number" name="sitter's number" placeholder="Enter sitter's number...">
             <a href="sitters dashboard.html">LOGIN</a>
         </form>
     </div>
+<script src="sitter.js"></script>
 </body>
 </html>
