@@ -1,103 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>REGISTER BABIES</title>
-<style>
-    /* body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-    } */
-    body {
-  background-image: url('images/baby.jpg'); /* Specify the path to your image */
-  background-size: cover; /* Cover the entire background */
-  background-position: center; /* Position the background image at the center */
-  /* You can also use additional background properties such as repeat, attachment, etc. */
-}
-    .container {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REGISTER BABIES</title>
+    <style>
+      body {
+        background-image: url("images/baby.jpg"); /* Specify the path to your image */
+        background-size: cover; /* Cover the entire background */
+        background-position: center; /* Position the background image at the center */
+        /* You can also use additional background properties such as repeat, attachment, etc. */
+      }
+      .container {
         max-width: 400px;
         margin: 50px auto;
         background-color: #fff;
         padding: 20px;
         border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .container h2 {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .container h2 {
         text-align: center;
-    }
-    .form-group {
+      }
+      .form-group {
         margin-bottom: 20px;
-    }
-    .form-group label {
+      }
+      .form-group label {
         display: block;
         font-weight: bold;
-    }
-    .form-group input[type="text"], 
-    .form-group input[type="number"] {
+      }
+      .form-group input[type="text"],
+      .form-group input[type="number"] {
         width: 100%;
         padding: 8px;
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
-    }
-    .form-group textarea {
+      }
+      .form-group textarea {
         width: 100%;
         padding: 8px;
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
         resize: vertical;
-    }
-    .btn {
+      }
+      .btn {
         display: block;
         width: 100%;
         padding: 10px;
         border: none;
-        background-color: #4CAF50;
+        background-color: #4caf50;
         color: #fff;
         text-align: center;
         font-size: 16px;
         cursor: pointer;
         border-radius: 4px;
-    }
-    .btn:hover {
+      }
+      .btn:hover {
         background-color: #45a049;
-    }
-</style>
-</head>
-<body>
+      }
+    </style>
+  </head>
+  <body>
     <div class="container">
-        <h2>Baby Registration Form</h2>
-        <form action="#" method="post">
-            <div class="form-group">
-                <label for="childName">Baby's Name:</label>
-                <input type="text" id="childName" name="childName" required>
-            </div>
-            <div class="form-group">
-                <label for="childSex">Baby's Sex:</label>
-                <label><input type="radio" name="childSex" value="male" required> Male</label>
-                <label><input type="radio" name="childSex" value="female" required> Female</label>
-            </div>
-            <div class="form-group">
-                <label for="childAge">Baby's Age:</label>
-                <input type="number" id="childAge" name="childAge" required>
-            </div>
-            <div class="form-group">
-                <label for="childWeight">Baby's Weight (in kg):</label>
-                <input type="number" id="childWeight" name="childWeight" step="0.01" required>
-            </div>
-            <div class="form-group">
-                <label for="childAllergies">Allergies (if any):</label>
-                <textarea id="childAllergies" name="childAllergies" rows="4"></textarea>
-            </div>
-            <button type="submit" class="btn">Submit</button>
-        </form>
+      <h2>Baby Registration Form</h2>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="babyName">Baby's Name:</label>
+          <input type="text" id="babyName" name="babyName" required />
+        </div>
+        <div class="form-group">
+          <label for="babySex">Baby's Sex:</label>
+          <label
+            ><input type="radio" name="babySex" value="male" required />
+            Male</label
+          >
+          <label
+            ><input type="radio" name="babySex" value="female" required />
+            Female</label
+          >
+        </div>
+        <div class="form-group">
+          <label for="babyAge">Baby's Age:</label>
+          <input type="number" id="babyAge" name="babyAge" required />
+        </div>
+        <div class="form-group">
+          <label for="babyWeight">Baby's Weight (in kg):</label>
+          <input
+            type="number"
+            id="babyWeight"
+            name="babyWeight"
+            step="0.01"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="babayAllergies">Allergies (if any):</label>
+          <textarea id="babyAllergies" name="babyAllergies" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
     </div>
-    \\
-    <script src="dummydata.js"></script>
 
-</body>
+
+  </body>
 </html>

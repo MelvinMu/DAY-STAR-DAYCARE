@@ -1,27 +1,44 @@
-.mel {
-    color:blue;
-    font-size: 100px;
-    text-align: center;
-}
-#yap {
-    color:blue;
-    font-size: larger;
-    background-color: aqua;
-    position: fixed; 
-    top: 50%;
-    left: 50%; 
-    transform: translate(-50%, -50%);
-}
-#wow {
-    color:red;
-    font-size: 100px;
-}
-.bubbles {
-    color:aqua;
-}
-#woo {
-    color:aquamarine;
-    font-size: larger;
-}
-
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      text-align: center;
+    }
+    .title {
+      font-size: 36px;
+      font-weight: bold;
+      color: red;
+    }
+    .card {
+      background-color: burlywood;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      margin-top: 30px;
+    }
+    .welcome-text {
+      font-size: 24px;
+      color: #666;
+    }
+    .login-button {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 30px;
+    }
+    .login-button:hover {
+      background-color: #45a049;
+    }
  

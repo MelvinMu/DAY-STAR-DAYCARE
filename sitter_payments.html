@@ -1,54 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sitter's Payment Form</title>
-<style>
-     body {
-  background-image: url('images/money.avif'); /* Specify the path to your image */
-  background-size: cover; /* Cover the entire background */
-  background-position: center; /* Position the background image at the center */
-  /* You can also use additional background properties such as repeat, attachment, etc. */
-}
-    
-    .container {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sitter's Payment Form</title>
+    <style>
+      body {
+        background-image: url("images/money.avif"); /* Specify the path to your image */
+        background-size: cover; /* Cover the entire background */
+        background-position: center; /* Position the background image at the center */
+        /* You can also use additional background properties such as repeat, attachment, etc. */
+      }
+
+      .container {
         max-width: 500px;
         margin: 50px auto;
         background-color: #fff;
         padding: 20px;
         border-radius: 5px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    h2 {
+      }
+
+      h2 {
         text-align: center;
-    }
-    
-    .form-group {
+      }
+
+      .form-group {
         margin-bottom: 20px;
-    }
-    
-    .form-group label {
+      }
+
+      .form-group label {
         display: block;
         font-weight: bold;
-    }
-    
-    .form-group input[type="text"] {
+      }
+
+      .form-group input[type="text"] {
         width: 100%;
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
-    }
-    
-    .form-group input[type="date"] {
+      }
+
+      .form-group input[type="date"] {
         width: 100%;
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
-    }
-    
-    .btn {
+      }
+
+      .btn {
         display: block;
         width: 100%;
         padding: 10px;
@@ -58,37 +58,36 @@
         border-radius: 5px;
         cursor: pointer;
         font-size: 16px;
-    }
-    
-    .btn:hover {
-        background-color: #0056b3;
-    }
-</style>
-</head>
-<body>
+      }
 
-<div class="container">
-    <h2>Sitter's Payment Form</h2>
-    <form action="#" method="post">
+      .btn:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Sitter's Payment Form</h2>
+      <form action="#" method="post">
         <div class="form-group">
-            <label for="sitter-name">Sitter's Name</label>
-            <input type="text" id="sitter-name" name="sitter-name" required>
+          <label for="sitter-name">Sitter's Name</label>
+          <input type="text" id="sitter-name" name="sitter-name" required />
         </div>
         <div class="form-group">
-            <label for="amount">Amount Paid</label>
-            <input type="text" id="amount" name="amount" required>
+          <label for="amount">Amount Paid</label>
+          <input type="text" id="amount" name="amount" required />
         </div>
         <div class="form-group">
-            <label for="telephone">Telephone</label>
-            <input type="text" id="telepshone" name="telephone" required>
+          <label for="telephone">Telephone</label>
+          <input type="text" id="telepshone" name="telephone" required />
         </div>
         <div class="form-group">
-            <label for="date">Date Paid</label>
-            <input type="date" id="date" name="date" required>
+          <label for="date">Date Paid</label>
+          <input type="date" id="date" name="date" required />
         </div>
         <button type="submit" class="btn">Submit</button>
-    </form>
-</div>
-<script src="script.js"></script> 
-</body>
+      </form>
+    </div>
+    
+  </body>
 </html>
