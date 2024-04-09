@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Summary</title>
+    <style>
+      /* Your CSS styles here */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Payment Summary</h2>
+        <div id="summary"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Retrieve payment data from local storage
+            const paymentData = JSON.parse(localStorage.getItem('paymentData'));
+
+            // Render payment data
+            if (paymentData) {
+                const summaryContainer = document.getElementById('summary');
+                summaryContainer.innerHTML = `
+                    <p><strong>Sitter's Name:</strong> ${paymentData.sitterName}</p>
+                    <p><strong>Amount Paid:</strong> ${paymentData.amount}</p>
+                    <p><strong>Telephone:</strong> ${paymentData.telephone}</p>
+                    <p><strong>Date Paid:</strong> ${paymentData.date}</p>
+                `;
+            } else {
+                document.getElementById('summary').innerHTML = '<p>No payment data found.</p>';
+            }
+        });
+    </script>
+</body>
+</html>
