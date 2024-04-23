@@ -1,118 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <style>
-        /* body {
+      /* body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         } */
-        body {
-  background-image: url('images/daycare.jpg'); /* Specify the path to your image */
-  background-size: cover; /* Cover the entire background */
-  background-position: center; /* Position the background image at the center */
-  /* You can also use additional background properties such as repeat, attachment, etc. */
-}
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-        .box {
-            width: 300px;
-            background-color: #f0f0f0;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        h2 {
-            margin-top: 0;
-        }
-        .field {
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .field label {
-            margin-right: 10px;
-            font-weight: bold;
-        }
-        .field input[type="text"] {
-            padding: 8px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            width: 200px;
-        }
-        .field input[type="submit"] {
-            padding: 8px 20px;
-            border-radius: 4px;
-            border: none;
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-        }
+      body {
+        background-image: url("images/daycare.jpg"); /* Specify the path to your image */
+        background-size: cover; /* Cover the entire background */
+        background-position: center; /* Position the background image at the center */
+        /* You can also use additional background properties such as repeat, attachment, etc. */
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+      .box {
+        width: 300px;
+        background-color: #f0f0f0;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      h2 {
+        margin-top: 0;
+      }
+      .field {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .field label {
+        margin-right: 10px;
+        font-weight: bold;
+      }
+      .field input[type="text"] {
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        width: 200px;
+      }
+      .field input[type="submit"] {
+        padding: 8px 20px;
+        border-radius: 4px;
+        border: none;
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="box">
-            <h2>Admin</h2>
-            <form>
-                <div class="field">
-                    <label for="admin-username">Username:</label>
-                    <input type="text" id="admin-username" name="admin-username">
-                </div>
-                <div class="field">
-                    <label for="admin-password">Password:</label>
-                    <input type="text" id="admin-password" name="admin-password">
-                </div>
-                <div class="field">
-                    <a href="Admin_page.html" class="login-link">Login</a>
-                </div>
-            </form>
-        </div>
-        <div class="box">
-            <h2>Sitter</h2>
-            <form>
-                <div class="field">
-                    <label for="sitter-username">Username:</label>
-                    <input type="text" id="sitter-username" name="sitter-username">
-                </div>
-                <div class="field">
-                    <label for="sitter-password">Password:</label>
-                    <input type="text" id="sitter-password" name="sitter-password">
-                </div>
-                <div class="field">
-                    <a href="sitters dashboard.html" class="login-link">Login</a>
-
-                </div>
-            </form>
-        </div>
-        <div class="box">
-            <h2>Parent</h2>
-            <form>
-                <div class="field">
-                    <label for="parent-username">Username:</label>
-                    <input type="text" id="parent-username" name="parent-username">
-                </div>
-                <div class="field">
-                    <label for="parent-password">Password:</label>
-                    <input type="text" id="parent-password" name="parent-password">
-                </div>
-                <div class="field">
-                    <a href="Parent.html" class="login-link">Login</a>
-                </div>
-            </form>
-        </div>
+      <div class="box">
+        <h2>Admin</h2>
+        <form>
+          <div class="field">
+            <label for="admin-username">Username:</label>
+            <input type="text" id="admin-username" name="admin-username" />
+          </div>
+          <div class="field">
+            <label for="admin-password">Password:</label>
+            <input type="password" id="admin-password" name="admin-password" />
+          </div>
+          <div class="field">
+            <a href="Admin_page.html" class="login-link">Login</a>
+          </div>
+        </form>
+      </div>
+      <div class="box">
+        <h2>Sitter</h2>
+        <form>
+          <div class="field">
+            <label for="sitter-username">Username:</label>
+            <input type="text" id="sitter-username" name="sitter-username" />
+          </div>
+          <div class="field">
+            <label for="sitter-password">Password:</label>
+            <input
+              type="password"
+              id="sitter-password"
+              name="sitter-password"
+            />
+          </div>
+          <div class="field">
+            <a href="sitters dashboard.html" class="login-link">Login</a>
+          </div>
+        </form>
+      </div>
+      <div class="box">
+        <h2>Parent</h2>
+        <form>
+          <div class="field">
+            <label for="parent-username">Username:</label>
+            <input type="text" id="parent-username" name="parent-username" />
+          </div>
+          <div class="field">
+            <label for="parent-password">Password:</label>
+            <input
+              type="password"
+              id="parent-password"
+              name="parent-password"
+            />
+          </div>
+          <div class="field">
+            <a href="Parentdashboard.html" class="login-link">Login</a>
+          </div>
+        </form>
+      </div>
     </div>
-
-</body>
+  </body>
 </html>

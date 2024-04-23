@@ -3,106 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>REGISTER BABIES</title>
-    <style>
-      body {
-        background-image: url("images/baby.jpg"); /* Specify the path to your image */
-        background-size: cover; /* Cover the entire background */
-        background-position: center; /* Position the background image at the center */
-        /* You can also use additional background properties such as repeat, attachment, etc. */
-      }
-      .container {
-        max-width: 400px;
-        margin: 50px auto;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-      .container h2 {
-        text-align: center;
-      }
-      .form-group {
-        margin-bottom: 20px;
-      }
-      .form-group label {
-        display: block;
-        font-weight: bold;
-      }
-      .form-group input[type="text"],
-      .form-group input[type="number"] {
-        width: 100%;
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-      }
-      .form-group textarea {
-        width: 100%;
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        resize: vertical;
-      }
-      .btn {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        border: none;
-        background-color: #4caf50;
-        color: #fff;
-        text-align: center;
-        font-size: 16px;
-        cursor: pointer;
-        border-radius: 4px;
-      }
-      .btn:hover {
-        background-color: #45a049;
-      }
-    </style>
+    <title>Baby Register Form</title>
+    <link rel="stylesheet" href="/css/register.css" />
   </head>
   <body>
     <div class="container">
-      <h2>Baby Registration Form</h2>
-      <form action="#" method="post">
+      <h2>Baby Register Form</h2>
+      <form action="submit.php" method="post">
         <div class="form-group">
-          <label for="babyName">Baby's Name:</label>
+          <label for="babyName">Name of Baby:</label>
           <input type="text" id="babyName" name="babyName" required />
         </div>
         <div class="form-group">
-          <label for="babySex">Baby's Sex:</label>
-          <label
-            ><input type="radio" name="babySex" value="male" required />
-            Male</label
-          >
-          <label
-            ><input type="radio" name="babySex" value="female" required />
-            Female</label
-          >
+          <label for="babyGender">Gender:</label>
+          <select id="babyGender" name="babyGender" required>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
         </div>
         <div class="form-group">
-          <label for="babyAge">Baby's Age:</label>
+          <label for="babyAge">Age:</label>
           <input type="number" id="babyAge" name="babyAge" required />
         </div>
         <div class="form-group">
-          <label for="babyWeight">Baby's Weight (in kg):</label>
-          <input
-            type="number"
-            id="babyWeight"
-            name="babyWeight"
-            step="0.01"
-            required
-          />
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" required />
         </div>
         <div class="form-group">
-          <label for="babayAllergies">Allergies (if any):</label>
-          <textarea id="babyAllergies" name="babyAllergies" rows="4"></textarea>
+          <label for="personBrought"
+            >Name of the Person who Brought the Baby:</label
+          >
+          <input type="text" id="personBrought" name="personBrought" required />
         </div>
-        <button type="submit" class="btn">Submit</button>
+        <div class="form-group">
+          <label for="parentName">Parent Name:</label>
+          <input type="text" id="parentName" name="parentName" required />
+        </div>
+        <div class="form-group">
+          <label for="fee">Fee in Ugshs:</label>
+          <input type="number" id="fee" name="fee" required />
+        </div>
+        <div class="form-group">
+          <label for="periodOfStay">Period of Stay:</label>
+          <select id="periodOfStay" name="periodOfStay" required>
+            <option value="">Select Period</option>
+            <option value="halfDay">Half Day</option>
+            <option value="wholeDay">Whole Day</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="babyNumber">Baby Number:</label>
+          <input type="text" id="babyNumber" name="babyNumber" required />
+        </div>
+        <input type="submit" value="Submit" />
       </form>
     </div>
-
-
+    <script src="/Js/register.js"></script>
   </body>
 </html>

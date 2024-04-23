@@ -1,110 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Procurement Page</title>
-<style>
-    body {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Procurement Page</title>
+    <style>
+      body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
         background-color: #f4f4f4;
-    }
-    .container {
+      }
+      .container {
         max-width: 800px;
         margin: 20px auto;
         padding: 20px;
         background-color: #fff;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
+      }
+      h1 {
         text-align: center;
-    }
-    .inventory {
+      }
+      .inventory {
         margin-top: 20px;
-    }
-    .inventory table {
+      }
+      .inventory table {
         width: 100%;
         border-collapse: collapse;
-    }
-    .inventory th, .inventory td {
+      }
+      .inventory th,
+      .inventory td {
         padding: 10px;
         text-align: center;
         border-bottom: 1px solid #ddd;
-    }
-    .inventory th {
+      }
+      .inventory th {
         background-color: #f2f2f2;
-    }
-    .inventory td input[type="text"] {
+      }
+      .inventory td input[type="text"] {
         width: 100%;
         padding: 5px;
         box-sizing: border-box;
-    }
-    .add-item {
+      }
+      .add-item {
         margin-top: 20px;
         text-align: center;
-    }
-    .add-item input[type="text"], .add-item input[type="number"] {
+      }
+      .add-item input[type="text"],
+      .add-item input[type="number"] {
         padding: 10px;
         margin-right: 10px;
         box-sizing: border-box;
-    }
-    .add-item input[type="submit"] {
+      }
+      .add-item input[type="submit"] {
         padding: 10px 20px;
-        background-color: #4CAF50;
+        background-color: #4caf50;
         color: #fff;
         border: none;
         border-radius: 4px;
         cursor: pointer;
-    }
-    .add-item input[type="submit"]:hover {
+      }
+      .add-item input[type="submit"]:hover {
         background-color: #45a049;
-    }
-</style>
-</head>
-<body>
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Procurement Page</h1>
 
-<div class="container">
-    <h1>Procurement Page</h1>
-
-    <div class="inventory">
+      <div class="inventory">
         <h2>Inventory</h2>
         <table>
-            <thead>
-                <tr>
-                    <th>Item Sold</th>
-                    <th>Quantity</th>
-                    <th>Unit Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>DOLLS</td>
-                    <td>10</td>
-                    <td>shs.5000</td>
-                </tr>
-                <tr>
-                    <td>Diapers</td>
-                    <td>15</td>
-                    <td>Shs.2000</td>
-                </tr>
-                <!-- Add more rows as needed -->
-            </tbody>
+          <thead>
+            <tr>
+              <th>Item Sold</th>
+              <th>Quantity</th>
+              <th>Unit Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>DOLLS</td>
+              <td>10</td>
+              <td>shs.5000</td>
+            </tr>
+            <tr>
+              <td>Diapers</td>
+              <td>15</td>
+              <td>Shs.2000</td>
+            </tr>
+            <!-- Add more rows as needed -->
+          </tbody>
         </table>
-    </div>
+      </div>
+
+      
+   
 
     <div class="add-item">
-        <h2>Add New Item</h2>
-        <form id="addItemForm">
-            <input type="text" name="itemName" placeholder="Item Name">
-            <input type="number" name="quantity" placeholder="Quantity">
-            <input type="number" name="unitPrice" placeholder="Unit Price">
-            <input type="submit" value="Add Item">
-        </form>
-    </div>
-</div>
+      <h2>Add New Item</h2>
+      <form id="addItemForm">
+          <input type="text" name="itemName" placeholder="Item Name" />
+          <input type="number" name="quantity" id="quantity" placeholder="Quantity" />
+          <input type="number" name="unitPrice" id="unitPrice" placeholder="Unit Price" />
+          <input type="submit" value="Add Item" />
+      </form>
+      <div>Total: <span id="totalAmount">0</span></div>
+  </div>
 
-</body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="/Js/Procurement.js"></script>
+    
+  </body>
 </html>

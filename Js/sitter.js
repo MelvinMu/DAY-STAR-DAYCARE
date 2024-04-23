@@ -1,41 +1,58 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('payment-form');
+const paymentHistory = [];
+const registeredSitters = [
+    {
+        name: "Jake",
+        amount: 2,
+        telephone: "075345678" // Added quotes to make it a string
+    },
+    {
+        name: "John",
+        amount: 2,
+        telephone: "0785222189" // Added quotes to make it a string
+    }
+];
 
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
+//Function
+function updatePaymentHistory() {
+    const paymentHistoryBody = document.getElementById("sitterpayment");
+    if (!paymentHistoryBody) {
+        console.error("Element with id 'sitterpayment' not found.");
+        return; // Exit the function if element not found
+    }
 
-        const sitterName = document.getElementById('sitter-name').value;
-        const amount = document.getElementById('amount').value;
-        const telephone = document.getElementById('telephone').value;
-        const date = document.getElementById('date').value;
-
-        const paymentData = {
-            sitterName: sitterName,
-            amount: amount,
-            telephone: telephone,
-            date: date
-        };
-
-        // Dummy data for testing
-        const dummyData = [
-            {
-                sitterName: 'John Doe',
-                amount: '50',
-                telephone: '1234567890',
-                date: '2024-04-07'
-            },
-            {
-                sitterName: 'Jane Smith',
-                amount: '75',
-                telephone: '9876543210',
-                date: '2024-04-08'
-            }
-        ];
-
-        // Store the payment data in local storage
-        localStorage.setItem('paymentData', JSON.stringify(paymentData));
-
-        // Redirect to the new page to render the data
-        window.location.href = 'payment_summary.html';
+    paymentHistoryBody.innerHTML = ""; // Clear the content of the table body
+    paymentHistory.forEach(entry => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${entry.name}</td>
+            <td>${entry.amount}</td>
+            <td>${entry.telephone}</td>
+        `;
+        paymentHistoryBody.appendChild(row);
     });
+}
+
+//eventlisteners for the submit button
+document.getElementById("sitterform").addEventListener("submit", (event)=>{
+    event.preventDefault();
+    const sitterName = document.getElementById("sitter-name").value;
+    const amountPaid = document.getElementById("amount").value;
+    const telephone = document.getElementById("telephone").value;
+    const datepaid = document.getElementById("Date")
+paymentHistory.push({
+     sitterName:"name",
+     amount:amount,
+     telephone:telephone,
+     date:new Date().toLocaleString
+
 });
+
+
+updatePaymentHistory();
+
+})
+
+
+
+// Call the function to update the payment history initially
+updatePaymentHistory();
