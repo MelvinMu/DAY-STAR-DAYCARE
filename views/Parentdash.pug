@@ -1,0 +1,59 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Parent Dashboard
+  style.
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+    }
+    .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    }
+    .feature {
+    margin-bottom: 20px;
+    }
+    .feature h2 {
+    margin-bottom: 10px;
+    }
+    .btn {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+    }
+    .btn:hover {
+    background-color: #45a049;
+    }
+.container
+  h1 Parent Dashboard
+  .feature
+    h2 Parent Registration
+    p Register as a parent to access daycare information.
+    a.btn(href='Parent.pug') Register as Parent
+  .feature
+    h2 Parent Access
+    p Access important information about your child&apos;s daycare.
+    a.btn(href='Parent_access.pug') Go to Parent Access
+  .feature
+    h2 Parent Feedback
+    p Provide feedback about your experience with the daycare.
+    a.btn(href='Parentfeedback.pug') Go to Parent Feedback

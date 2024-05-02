@@ -1,0 +1,94 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Dashboard
+  link(rel='stylesheet' href='styles.css')
+  style.
+    /* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    } */
+    body {
+    background-image: url("images/daycare.jpg"); /* Specify the path to your image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Position the background image at the center */
+    /* You can also use additional background properties such as repeat, attachment, etc. */
+    }
+    .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    }
+    .box {
+    width: 300px;
+    background-color: #f0f0f0;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    }
+    h2 {
+    margin-top: 0;
+    }
+    .field {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .field label {
+    margin-right: 10px;
+    font-weight: bold;
+    }
+    .field input[type="text"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 200px;
+    }
+    .field input[type="submit"] {
+    padding: 8px 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    }
+.container
+  .box
+    h2 Admin
+    form
+      .field
+        label(for='admin-username') Email:
+        input#admin-username(type='text' name='admin-email')
+      .field
+        label(for='admin-password') Password:
+        input#admin-password(type='password' name='admin-password')
+      .field
+        a.login-link(href='Admin.pug') Login
+  .box
+    h2 Sitter
+    form
+      .field
+        label(for='sitter-username') Email:
+        input#sitter-username(type='text' name='sitter-email')
+      .field
+        label(for='sitter-password') Password:
+        input#sitter-password(type='password' name='sitter-password')
+      .field
+        a.login-link(href='sitterdash.pug') Login
+  .box
+    h2 Parent
+    form
+      .field
+        label(for='parent-username') Email:
+        input#parent-username(type='text' name='parent-email')
+      .field
+        label(for='parent-password') Password:
+        input#parent-password(type='password' name='parent-password')
+      .field
+        a.login-link(href='Parentdashboard.html') Login

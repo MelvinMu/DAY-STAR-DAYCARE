@@ -1,0 +1,84 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Admin Dashboard
+  style.
+    
+    body {
+    background-image: url("images/kids.jpg"); /* Specify the path to your image */
+    background-size: 400px; /* Cover the entire background */
+    background-position: left; /* Position the background image at the center */
+    /* You can also use additional background properties such as repeat, attachment, etc. */
+    }
+    .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    }
+    .dashboard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .dashboard h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    }
+    .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    }
+    .feature {
+    flex: 1;
+    max-width: 300px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    }
+    .feature h2 {
+    margin-top: 0;
+    }
+    .feature p {
+    margin-bottom: 20px;
+    }
+    .feature a {
+    display: block;
+    padding: 10px 0;
+    background-color: #4caf50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    }
+    .feature a:hover {
+    background-color: #45a049;
+    }
+.container
+  .dashboard
+    h1 Admin Dashboard
+    .features
+      .feature
+        h2 Register Babies
+        p Add new babies to the system.
+        a(href='Registration.html') Go to Registration
+      .feature
+        h2 Register Babysitter
+        p Register new babysitters.
+        a(href='sitterregistration.html') Go to Sitters Page
+      .feature
+        h2 Procurement Corner
+        p Manage procurement activities.
+        a(href='Procurement.html') Go to Procurement Corner
+      .feature
+        h2 Data Tracker
+        p Track data related to babies and babysitters.
+        a(href='data_tracker.html') Go to Data Tracker
+script(src='dummydata.js')

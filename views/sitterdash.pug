@@ -1,0 +1,99 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Sitter&apos;s Dashboard
+  style.
+    body {
+    background-image: url("images/poo.jpg"); /* Specify the path to your image */
+    background-size: 400px; /* Cover the entire background */
+    background-position: center; /* Position the background image at the center */
+    /* You can also use additional background properties such as repeat, attachment, etc. */
+    }
+    .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    }
+    .dashboard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .dashboard h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    }
+    .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    }
+    .feature {
+    flex: 1;
+    max-width: 300px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    }
+    .feature h2 {
+    margin-top: 0;
+    }
+    .feature p {
+    margin-bottom: 20px;
+    }
+    .feature a {
+    display: block;
+    padding: 10px 0;
+    background-color: #4caf50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    }
+    .feature a:hover {
+    background-color: #45a049;
+    }
+.container
+  .dashboard
+    h1 Sitter&apos;s Dashboard
+    .features
+      .feature
+        h2 Baby Register
+        p Register new babies.
+        a(href='Registration.html') Go to Baby Register
+      .feature
+        h2 Payments
+        p Manage payments for babysitting services.
+        a(href='sitterpay.pug') Go to Payments
+      .feature
+        h2 Baby&apos;s Milestones
+        p Track and update baby&apos;s milestones.
+        a(href="babymilestone.pug") Go to Baby&apos;s Milestones
+      .feature
+        h2 SITTER REGISTRATION
+        p REGISTER SITTER.
+        a(href='sitterreg.pug') Go to Siiter Registration
+//- script.
+//-   document.addEventListener("DOMContentLoaded", function () {
+//-   const sitterData = JSON.parse(localStorage.getItem("sitterData"));
+//-   if (sitterData) {
+//-   const sitterInfoContainer = document.getElementById("sitter-info");
+//-   sitterInfoContainer.innerHTML = `
+//-   <p><strong>Sitter's Name:</strong> ${sitterData.name}</p>
+//-   <p><strong>Email Address:</strong> ${sitterData.email}</p>
+//-   <p><strong>Time In:</strong> ${sitterData.timeIn}</p>
+//-   <p><strong>Time Out:</strong> ${sitterData.timeOut}</p>
+//-   <p><strong>Sitter's Number:</strong> ${sitterData.sitterNumber}</p>
+//-   `;
+//-   } else {
+//-   document.getElementById("sitter-info").innerHTML =
+//-   "<p>No sitter information found.</p>";
+//-   }
+//-   });

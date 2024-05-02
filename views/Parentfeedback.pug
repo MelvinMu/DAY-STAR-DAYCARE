@@ -1,0 +1,99 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Parent&apos;s Feedback Form
+  style.
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    }
+    .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-group {
+    margin-bottom: 20px;
+    }
+    label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    }
+    input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    }
+    textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    }
+    input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    }
+    input[type="submit"]:hover {
+    background-color: #45a049;
+    }
+.container
+  h2 Parent&apos;s Feedback Form
+  form(action='/Parentfeed' method='post')
+    .form-group
+      label(for='rating') Rating:
+      select#rating(name='rating')
+        option(value='5') &starf;&starf;&starf;&starf;&starf;
+        option(value='4') &starf;&starf;&starf;&starf;&star;
+        option(value='3') &starf;&starf;&starf;&star;&star;
+        option(value='2') &starf;&starf;&star;&star;&star;
+        option(value='1') &starf;&star;&star;&star;&star;
+    .form-group
+      label(for='comments') Comments:
+      textarea#comments(name='comments' placeholder='Write your comments here...')
+    .form-group
+      label(for='name') Name:
+      input#name(type='text' name='name' placeholder='Your Name')
+    .form-group
+      label(for='phone') Phone Number:
+      input#phone(type='text' name='phone' placeholder='Your Phone Number')
+    input(type='submit' value='Submit')
+script.
+  function validateForm() {
+  var rating = document.getElementById("rating").value;
+  var comments = document.getElementById("comments").value;
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone").value;
+  var errorMessage = "";
+  if (rating === "") {
+  errorMessage += "Please select a rating.\\n";
+  }
+  if (comments === "") {
+  errorMessage += "Please enter your comments.\\n";
+  }
+  if (name === "") {
+  errorMessage += "Please enter your name.\\n";
+  }
+  if (phone === "") {
+  errorMessage += "Please enter your phone number.\\n";
+  }
+  if (errorMessage !== "") {
+  alert(errorMessage);
+  return false;
+  }
+  return true;
+  }

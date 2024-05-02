@@ -1,0 +1,63 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Parent&apos;s Page
+  style.
+    body {
+    background-image: url("images/parent.jpg");
+    background-size: 500px;
+    background-position: center;
+    }
+    .container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+    text-align: center;
+    }
+    form {
+    margin-top: 20px;
+    }
+    label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    }
+    input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    }
+    input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    input[type="submit"]:hover {
+    background-color: #45a049;
+    }
+.container
+  h1 Parent&apos;s Information
+  form
+    label(for='parentName') Parent&apos;s Name:
+    input#parentName(type='text' name='parentName' required='')
+    label(for='parentNumber') Parent&apos;s Number:
+    input#parentNumber(type='text' name='parentNumber' required='')
+    label(for='childName') Name of Parent&apos;s Child:
+    input#childName(type='text' name='childName' required='')
+    label(for='parentAddress') Parent&apos;s Address:
+    input#parentAddress(type='text' name='parentAddress' required='')
+    label(for='emergencyContact') Emergency Contact:
+    input#emergencyContact(type='text' name='emergencyContact' required='')
+    input(type='submit' value='Submit')
