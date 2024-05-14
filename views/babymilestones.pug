@@ -3,7 +3,7 @@ head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title Baby&apos;s Milestones Form
-  link(rel='stylesheet' href='style.css')
+  link(rel='stylesheet' href='/css/style.css')
 style.
   body {
   background-image: url('images/crawl.jpg'); /* Specify the path to your image */
@@ -14,10 +14,10 @@ style.
 .container
   .milestones-form
     h1 Baby&apos;s Milestones Form
-    form
+    form(action='/babymile' method='post')
       .form-group
         label(for='baby-name') Baby&apos;s Name:
-        input#baby-name(type='text' name='baby-name' required='')
+        input#baby-name(type='text' name='babyName' required='')
       .form-group
         label(for='milestone') Milestone:
         input#milestone(type='text' name='milestone' required='')
@@ -26,7 +26,7 @@ style.
         textarea#recommendation(name='recommendation' rows='4')
       .form-group
         label(for='task-list') Task List:
-        textarea#task-list(name='task-list' rows='4')
+        textarea#task-list(name='taskList' rows='4')
       .form-group
         label(for='support') Support:
         textarea#support(name='support' rows='4')

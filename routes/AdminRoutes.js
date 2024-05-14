@@ -1,6 +1,12 @@
-// const express = require("express"); 
-// const router = express.Router();
+const express = require("express");
+const router = express.Router();
 
-// //import model
-// const Admin = require(../models/Application) 
-// router.get
+router.get("/Admin", (req, res) => {
+  res.render("Admin_page");
+});
+
+router.post("/Admin", (req, res) => {
+  res.render("Admin_page");
+});
+
+module.exports = router;

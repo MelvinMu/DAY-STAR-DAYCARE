@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", (req, res) => {
+router.get("/about", (req, res) => {
   res.render("about");
 });
 
-router.post("/", (req, res) => {
+router.post("/about", (req, res) => {
   res.render("about");
 });
 

@@ -3,28 +3,7 @@ const express = require("express"); //for posting
 const mongoose = require("mongoose"); //for mongodb
 const path = require("path"); //for pug
 const passport = require("passport");
-const expressSession = require("express-session")({
-  secret: "secret",
-  resave: false,
-  saveunintialised: false,
-});
-
 require("dotenv").config();
-
-//import register model with username
-const firstregister = require("./models/firstregister");
-// const form = require("./models/form");
-const sitterregister = require("./models/sitterregistration");
-
-const parentRoutes = require("./routes/ParentRoutes");
-const firstregisterRoutes = require("./routes/firstRoutes");
-const formRoutes = require("./routes/formRoutes");
-const sitterRoutes = require("./routes/sitterRoutes");
-const indexRoutes = require("./routes/indexRoutes")
-const AboutRoutes = require("./routes/AboutRoutes");
-const ParentfeedRoutes = require("./routes/ParentfeedRoutes");
-const DatatrackerRoutes = require("./routes/DatatrackerRoutes");
-
 
 //Instantiations
 const app = express();
@@ -45,23 +24,51 @@ mongoose.connection
 
 //
 
-app.set("view engine", "pug");
-app.set("views", path.join(__dirname, "views")); //specify the directory where the views are found
-
 //Middleware
 app.use(express.static(path.join(__dirname, "public"))); //set directory for static files
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "views")); //specify the directory where the views are found
+
+const expressSession = require("express-session")({
+  secret: "secret",
+  resave: false,
+  saveunintialised: false,
+});
 
 //Express session configuration
 app.use(expressSession);
 app.use(passport.initialize());
 app.use(passport.session());
 
+//import register model with username
+const firstregister = require("./models/firstregister");
+// const form = require("./models/form");
+const sitterregister = require("./models/sitterregistration");
+const sitterpayment = require("./models/sitterpayment");
 //passport configs
 passport.use(firstregister.createStrategy());
 passport.serializeUser(firstregister.serializeUser()); //ways of tracking user usage
 passport.deserializeUser(firstregister.deserializeUser());
+
+const parentRoutes = require("./routes/ParentRoutes");
+const firstregisterRoutes = require("./routes/firstRoutes");
+const formRoutes = require("./routes/formRoutes");
+const sitterRoutes = require("./routes/sitterRoutes");
+const indexRoutes = require("./routes/indexRoutes");
+const AboutRoutes = require("./routes/AboutRoutes");
+const ParentfeedRoutes = require("./routes/ParentfeedRoutes");
+const DatatrackerRoutes = require("./routes/DatatrackerRoutes");
+const registerbabyRoutes = require("./routes/registerbabyRoutes");
+const AdminRoutes = require("./routes/AdminRoutes");
+const ParentdashRoutes = require("./routes/ParentdashRoutes");
+const sitterdashRoutes = require("./routes/sitterdashRoutes");
+const BabymileRoutes = require("./routes/BabymileRoutes");
+const SitterpayRoutes = require("./routes/SitterpayRoutes");
+
+const { register } = require("module");
 
 //use imported routes
 
@@ -80,6 +87,20 @@ app.use("/", AboutRoutes);
 app.use("/", ParentfeedRoutes);
 
 app.use("/", DatatrackerRoutes);
+
+app.use("/", registerbabyRoutes);
+
+app.use("/", AdminRoutes);
+
+app.use("/", ParentdashRoutes);
+
+app.use("/", sitterdashRoutes);
+
+app.use("/", BabymileRoutes);
+
+app.use("/", SitterpayRoutes);
+
+
 
 // app.get("/Admin", (req, res) => {
 //   res.render("Admin");

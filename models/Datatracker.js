@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const dataschema = new mongoose.Schema({
+const dataSchema = new mongoose.Schema({
     babyname:{
         type: Number,
         trim: true
@@ -12,9 +12,9 @@ const dataschema = new mongoose.Schema({
         type: String,
         trim: true
     },
-    recommendations:{
+    recommendation:{
         type: Number,
         trim: true
     },
 }); 
-module.exports = mongoose.model("data", dataschema);
+module.exports = mongoose.model("Data", dataSchema);

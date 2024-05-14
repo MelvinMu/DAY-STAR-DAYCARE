@@ -1,0 +1,78 @@
+//- doctype html
+//- head
+//-   meta(charset='UTF-8')
+//-   meta(name='viewport' content='width=device-width, initial-scale=1.0')
+//-   title Document
+
+//- .container
+//-   h2 Baby Registration Form
+//-   form(action='/babyregister' method='POST')
+//-     .form-group
+//-       label(for=' babyname') Baby&apos;s Name:
+//-       input#babyname(type='text' name='babyName' required='')
+//-     .form-group
+//-       label(for='babySex') Baby&apos;s Sex:
+//-       label
+//-         input(type='radio' name='babySex' value='male' required='')
+//-         |  Male
+//-       label
+//-         input(type='radio' name='babySex' value='female' required='')
+//-         |  Female
+//-     .form-group
+//-       label(for='babyAge') Baby&apos;s Age:
+//-       input#babyAge(type='number' name='babyAge' required='')
+//-     .form-group
+//-       label(for='babyWeight') Baby&apos;s Weight (in kg):
+//-       input#babyWeight(type='number' name='babyWeight' step='0.01' required='')
+//-     .form-group
+//-       label(for='babyAllergies') Allergies (if any):
+//-       textarea#babyAllergies(name='babyAllergies' rows='4')
+//-     button.btn(type='submit') Submit
+//- //- // <script src="dummydata.js"></script>
+
+
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Baby Register Form
+  link(rel='stylesheet' href='/css/register.css')
+.container
+  h2 Baby Register Form
+  form#registrationForm(action= '/babydelete?id='+baby._id  method='POST')
+    .form-group
+      label(for='babyName') Name of Baby:
+      input#babyName(type='text' name='babyName' value=baby.babyName)
+    .form-group
+      label(for='babyGender') Gender:
+      select#babyGender(name='babyGender' value=baby.babyGender)
+        option(value='') Select Gender
+        option(value='male') Male
+        option(value='female') Female
+        option(value='other') Other
+    .form-group
+      label(for='babyAge') Age:
+      input#babyAge(type='number' name='babyAge' value=baby.babyAge)
+    .form-group
+      label(for='location') Location:
+      input#location(type='text' name='location' value=baby.location)
+    .form-group
+      label(for='personBrought') Name of the Person who Brought the Baby:
+      input#personBrought(type='text' name='personBrought' value=baby.personBrought)
+    .form-group
+      label(for='parentName') Parent Name:
+      input#parentName(type='text' name='parentName' value=baby.parentName)
+    .form-group
+      label(for='fee') Fee in Ugshs:
+      input#fee(type='number' name='fee' value=fee)
+    .form-group
+      label(for='periodOfStay') Period of Stay:
+      select#periodOfStay(name='periodOfStay' value=baby.periodOfStay)
+        option(value='') Select Period
+        option(value='halfDay') Half Day
+        option(value='wholeDay') Whole Day
+    .form-group
+      label(for='babyNumber') Baby Number:
+      input#babyNumber(type='text' name='babyNumber' value=baby.babyNumber)
+    input(type='submit' value='Submit')
+script(src='/Js/register.js')

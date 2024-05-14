@@ -1,0 +1,66 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Sitter Registration Form
+  link(rel='stylesheet' href='/css/sitterregister.css')
+h2 Sitter Registration Form
+form#registrationForm(action= '/sitterupdate?id='+sitter._id  method='POST')
+  fieldset
+    legend Personal Information:
+    label(for='firstName') First Name:
+    input#firstName(type='text' name='firstName' value=sitter.firstName)
+    br
+    br
+    label(for='lastName') Last Name:
+    input#lastName(type='text' name='lastName' value=sitter.lastName)
+    br
+    br
+    label(for='location') Location:
+    input#location(type='text' name='location' value=sitter.location)
+    br
+    br
+    label(for='dob') Date of Birth:
+    input#dob(type='date' name='dob' value=sitter.dob)
+    br
+    br
+    label(for='nin') National Identification Number (NIN):
+    input#nin(type='text' name='nin' value=sitter.nin)
+    br
+    br
+    label(for='nextOfKin') Next of Kin:
+    input#nextOfKin(type='text' name='nextOfKin' value=sitter.nextOfKin)
+    br
+    br
+    label(for='recommenderName') Recommender&apos;s Name:
+    input#recommenderName(type='text' name='recommenderName' value=sitter.recommenderName)
+    br
+    br
+  fieldset
+    .input-group
+      label(for='gender') Gender:
+      select#gender(name='gender')
+        option(value='') Select Gender
+        option(value='male') Male
+        option(value='female') Female
+        option(value='other') Other
+        value=sitter.gender
+  fieldset
+    legend Additional Information:
+    label(for='religion') Religion:
+    input#religion(type='text' name='religion' value=sitter.religion)
+    br
+    br
+    label(for='educationLevel') Level of Education:
+    input#educationLevel(type='text' name='educationLevel' value=sitter.educationLevel)
+    br
+    br
+    label(for='sitterNumber') Sitter Number:
+    input#sitterNumber(type='text' name='sitterNumber' value=sitter.sitterNumber)
+    br
+    br
+    label(for='contact') Contact Information:
+    input#contact(type='text' name='contact' view=sitter.contact)
+    br
+    br
+  input(type='submit' value='Submit')

@@ -1,18 +1,26 @@
 const mongoose = require("mongoose");
 const feedschema = new mongoose.Schema({
-  rating: {
+  adminEmail: {
     type: Number,
     trim: true,
   },
-  comments: {
+  adminPassword: {
     type: String,
     trim: true,
   },
-  name: {
+  sitterEmail: {
     type: String,
     trim: true,
   },
-  phone: {
+  sitterPassword: {
+    type: String,
+    trim: true,
+  },
+  parentPassword: {
+    type: String,
+    trim: true,
+  },
+  parentPassword: {
     type: Number,
     trim: true,
   },

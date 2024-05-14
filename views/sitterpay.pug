@@ -56,10 +56,10 @@ head
     }
 .container
   h2 Sitter&apos;s Payment Form
-  form#sitterform(action='#')
+  form(action='/Payment' method='post')
     .form-group
-      label(for='sitter-name') Sitter&apos;s Name
-      input#sitter-name(type='text' name='sitter-name' required='')
+      label(for='sitter-name') Sitter's Name
+      input#sitter-name(type='text' name='sitterName' required='')
     .form-group
       label(for='amount') Amount Paid
       input#amount(type='text' name='amount' required='')
@@ -71,19 +71,4 @@ head
       input#date(type='date' name='date' required='')
     button.btn(type='submit') Submit
 // Financial History
-.row
-  .col-md-12
-    .card
-      .card-header(style='color:red;')
-        | Payments made
-      .card-body
-        table.table
-          thead
-            tr(style='color:aqua; font-size: 20px;')
-              th Sitter&apos;s Name
-              th Amount paid
-              th Telephone
-              th Date paid
-          tbody#sitterpayment
-            // Table rows will be dynamically added here
-      script(src='/Js/sitter.js')
+

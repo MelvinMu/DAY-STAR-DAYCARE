@@ -1,7 +1,7 @@
-style.
+
    
-    body {
-    background-image: url('images/kids.jpg'); /* Specify the path to your image */
+     {
+    background-image:url('images/kids.jpg'); /* Specify the path to your image */
     background-size: 400px; /* Cover the entire background */
     background-position: left; /* Position the background image at the center */
     /* You can also use additional background properties such as repeat, attachment, etc. */
