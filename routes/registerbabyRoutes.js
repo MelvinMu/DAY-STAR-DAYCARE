@@ -97,8 +97,14 @@ router.get("/babylist",   async (req, res)=> {
 //updating a baby in the database
 router.get("/babyupdate/:id",   async(req, res)=> { //babiesUpdate can be any
   try{
-    const babyUpdate = await Baby.findOne({_id: req.params.id});
-    res.render("babyupdate", {baby:babyUpdate});
+    const baby = await Baby.findById(req.params.id);
+
+    if(!baby){
+      res.status(404) 
+      throw new Error("baby not found")
+    }
+    
+    res.render("babyupdate", {baby:baby});
 
   } catch(error){
      console.log("error finding a baby!", error);
@@ -106,7 +112,8 @@ router.get("/babyupdate/:id",   async(req, res)=> { //babiesUpdate can be any
   }
 })
 
-router.post("/babyupdate", async(req, res)=> {
+
+router.patch("/babyupdate", async(req, res)=> {
   try {
      await Baby.findByIdAndUpdate({_id: req.query.id}, req.body);
      res.redirect("/babylist");
@@ -115,5 +122,20 @@ router.post("/babyupdate", async(req, res)=> {
      res.status(404).send("unable to update baby in the db!");  
   }
 })
+
+router.post("/babydelete",   async(req, res)=> { 
+  try{
+    await Baby.deleteOne({_id:req.body.id});
+      
+      res.redirect("back");
+  } catch(error){
+     console.log("error finding a baby!", error);
+     res.status(400).send("unable to find baby from the db!");  
+  }
+})
+
+
+
+
 
 module.exports = router;

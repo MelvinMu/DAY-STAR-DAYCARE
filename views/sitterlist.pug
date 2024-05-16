@@ -20,17 +20,16 @@ html(lang="en")
             th(scope="col") First Name
             th(scope="col") Last Name
             th(scope="col") Location
-            th(scope="col") Location
             th(scope="col") Date of Birth
             th(scope="col") National Identification Number 
             th(scope="col") Next of Kin
-            th(scope="col") Recommender's Name
+            th(scope="col") Recommender Name
             th(scope="col") Gender
             th(scope="col") Religion
             th(scope="col") Level of Education
             th(scope="col") Sitter Number
             th(scope="col") Contact Information
-            th(scope="col") Checkin 
+            
             th(scope="col") Delete
             th(scope="col") Update  
 
@@ -50,8 +49,7 @@ html(lang="en")
             td #{sitter.educationLevel} 
             td #{sitter.sitterNumber} 
             td #{sitter.contact} 
-            td 
-              a.btn.btn-secondary.btn-sm(href="") Check In 
+             
             td
               a.btn.btn-danger.btn-sm(href="/delete") Delete 
             td   

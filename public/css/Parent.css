@@ -1,15 +1,8 @@
-
-/* body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  margin: 0;
-  padding: 0;
-} */
 body {
-background-image: url('images/parent.jpg'); /* Specify the path to your image */
-background-size: 500px; /* Cover the entire background */
-background-position: center; /* Position the background image at the center */
-/* You can also use additional background properties such as repeat, attachment, etc. */
+background-image: url('/public/images/parent.jpg'); 
+background-size: 500px; 
+background-position: center; 
+
 }
 
 .container {

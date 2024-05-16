@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image:url('public/images/wonderkids.jpg;') 
+}
+  form {
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type='email'],
+  input[type='password'],
+  input[type='text'],
+  input[type='submit'] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type='submit'] {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type='submit']:hover {
+    background-color: #45a049;
+  }
+  
+  p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .daystar-badge {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  

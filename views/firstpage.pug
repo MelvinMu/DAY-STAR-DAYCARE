@@ -61,7 +61,7 @@ head
 .container
   .box
     h2 Admin
-    form
+    form(action="/login" method="POST")
       .field
         label(for='admin-email') Email:
         input#admin-username(type='text' name='adminEmail')
@@ -69,7 +69,7 @@ head
         label(for='admin-password') Password:
         input#admin-password(type='password' name='adminPassword')
       .field
-        a.login-link(href='Admin.pug') Login
+        a.login-button(href='/admin')  Login
   .box
     h2 Sitter
     form

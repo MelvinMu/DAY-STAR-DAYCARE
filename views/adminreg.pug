@@ -1,0 +1,17 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Admin registration
+  link(rel="stylesheet", href="/css/adminreg.css")
+form(action="/register" method="POST")
+  span.daystar-badge DAYSTAR DAYCARE
+  p Welcome
+  input(type='email' placeholder='Email' name='email')
+  br
+  input(type='password' placeholder='Password' name='password')
+  br
+  input(type='text' placeholder='Role' value='Admin' name='role')
+  br
+  input(type='submit' value='REGISTER')
+  br

@@ -80,10 +80,16 @@ router.get("/sitterlist",   async (req, res)=> {
 
 
 //updating a sitter in the database
-router.get("/sitterupdate/:id",   async(req, res)=> { //babiesUpdate can be any
+router.get("/sitterupdate/:id",   async(req, res)=> { 
   try{
-    const sitterupdate = await Sitter.findOne({_id: req.params.id});
-    res.render("sitterupdate", {sitter:sitterupdate});
+    const sitter = await Sitter.findById(req.params.id);
+
+    if(!sitter){
+      res.status(404) 
+      throw new Error("sitter not found")
+    }
+    
+    res.render("sitterupdate", {sitter:sitter});
 
   } catch(error){
      console.log("error finding a sitter!", error);
@@ -91,13 +97,25 @@ router.get("/sitterupdate/:id",   async(req, res)=> { //babiesUpdate can be any
   }
 })
 
-router.post("/sitterupdate", async(req, res)=> {
+
+router.patch("/sitterupdate", async(req, res)=> {
   try {
      await Sitter.findByIdAndUpdate({_id: req.query.id}, req.body);
      res.redirect("/sitterlist");
 
   } catch (error) {
      res.status(404).send("unable to update sitter in the db!");  
+  }
+})
+
+router.post("/sitterdelete",   async(req, res)=> { 
+  try{
+    await Sitter.deleteOne({_id:req.body.id});
+      
+      res.redirect("back");
+  } catch(error){
+     console.log("error finding a sitter!", error);
+     res.status(400).send("unable to find sitter from the db!");  
   }
 })
 

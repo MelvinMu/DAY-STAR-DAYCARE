@@ -1,9 +1,17 @@
-//Dependencies
-const express = require("express"); //for posting
-const mongoose = require("mongoose"); //for mongodb
-const path = require("path"); //for pug
-const passport = require("passport");
+// dependency
+const express = require('express'); // for posting
+const mongoose = require('mongoose'); // for mongodb
+const path = require('path'); //for pug
+const passport = require('passport'); //for passport
+const moment = require('moment'); //for moment
+const expressSession = require('express-session')({ // for express-session
+  secret:"secret",
+  resave: false,
+  saveUninitialized: false
+});
 require("dotenv").config();
+const Adminenter = require("./models/Adminenter");
+
 
 //Instantiations
 const app = express();
@@ -32,11 +40,6 @@ app.use(express.json());
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views")); //specify the directory where the views are found
 
-const expressSession = require("express-session")({
-  secret: "secret",
-  resave: false,
-  saveunintialised: false,
-});
 
 //Express session configuration
 app.use(expressSession);
@@ -44,14 +47,13 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //import register model with username
-const firstregister = require("./models/firstregister");
+
 // const form = require("./models/form");
-const sitterregister = require("./models/sitterregistration");
-const sitterpayment = require("./models/sitterpayment");
+
 //passport configs
-passport.use(firstregister.createStrategy());
-passport.serializeUser(firstregister.serializeUser()); //ways of tracking user usage
-passport.deserializeUser(firstregister.deserializeUser());
+passport.use(Adminenter.createStrategy());
+passport.serializeUser(Adminenter.serializeUser()); //ways of tracking user usage
+passport.deserializeUser(Adminenter.deserializeUser());
 
 const parentRoutes = require("./routes/ParentRoutes");
 const firstregisterRoutes = require("./routes/firstRoutes");
@@ -67,9 +69,8 @@ const ParentdashRoutes = require("./routes/ParentdashRoutes");
 const sitterdashRoutes = require("./routes/sitterdashRoutes");
 const BabymileRoutes = require("./routes/BabymileRoutes");
 const SitterpayRoutes = require("./routes/SitterpayRoutes");
-
-const { register } = require("module");
-
+const AdminentRoutes = require("./routes/AdminentRoutes");
+const ProcurementRoutes = require("./routes/ProcurementRoutes");
 //use imported routes
 
 app.use("/", parentRoutes);
@@ -100,6 +101,9 @@ app.use("/", BabymileRoutes);
 
 app.use("/", SitterpayRoutes);
 
+app.use("/", AdminentRoutes);
+
+app.use=("/", ProcurementRoutes);
 
 
 // app.get("/Admin", (req, res) => {

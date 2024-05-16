@@ -26,7 +26,6 @@ html(lang="en")
             th(scope="col") Fee 
             th(scope="col") Period Of Stay
             th(scope="col") Baby Number
-            th(scope="col") Checkin 
             th(scope="col") Delete
             th(scope="col") Update  
 
@@ -36,17 +35,18 @@ html(lang="en")
           tr
             td #{baby.babyName}
             td #{baby.babyGender}
-            td #{baby.babyage}
+            td #{baby.babyAge}
             td #{baby.location}
             td #{baby.personBrought}
             td #{baby.parentName}
             td #{baby.fee}
             td #{baby.periodOfStay}
             td #{baby.babyNumber} 
+            
             td 
-              a.btn.btn-secondary.btn-sm(href="") Check In 
-            td
-              a.btn.btn-danger.btn-sm(href="/delete") Delete 
+                    form(method="POST" action="/babydelete")
+                      input(type="hidden" name="id" value=baby._id)
+                      button.btn.btn-danger.btn-sm(type="submit") Delete
             td   
               a.btn.btn-primary.btn-sm(href="/babyupdate/"+ baby._id) Update
 

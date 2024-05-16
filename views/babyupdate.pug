@@ -35,11 +35,11 @@ doctype html
 head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  title Baby Register Form
+  title Baby Update
   link(rel='stylesheet' href='/css/register.css')
 .container
-  h2 Baby Register Form
-  form#registrationForm(action= '/babyupdate?id='+baby._id  method='POST')
+  h2 Baby Update Form
+  form#registrationForm(action= '/babyupdate?id='+baby._id  method='PATCH')
     .form-group
       label(for='babyName') Name of Baby:
       input#babyName(type='text' name='babyName' value=baby.babyName)
