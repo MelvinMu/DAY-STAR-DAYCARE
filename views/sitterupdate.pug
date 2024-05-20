@@ -5,7 +5,7 @@ head
   title Sitter Registration Form
   link(rel='stylesheet' href='/css/sitterregister.css')
 h2 Sitter Registration Form
-form#registrationForm(action= '/sitterupdate?id='+sitter._id  method='PATCH')
+form#registrationForm(action= '/sitterupdate?id='+sitter._id  method='POST')
   fieldset
     legend Personal Information:
     label(for='firstName') First Name:

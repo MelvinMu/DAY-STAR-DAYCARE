@@ -26,6 +26,7 @@ html(lang="en")
             th(scope="col") Fee 
             th(scope="col") Period Of Stay
             th(scope="col") Baby Number
+            th(scope="col") Checkin
             th(scope="col") Delete
             th(scope="col") Update  
 
@@ -42,7 +43,8 @@ html(lang="en")
             td #{baby.fee}
             td #{baby.periodOfStay}
             td #{baby.babyNumber} 
-            
+            td
+              a.btn.btn-danger.btn-sm(href="/babyCheckin/"+ baby._id) Checkin 
             td 
                     form(method="POST" action="/babydelete")
                       input(type="hidden" name="id" value=baby._id)

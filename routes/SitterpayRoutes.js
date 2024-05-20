@@ -25,7 +25,7 @@ router.post("/Payment", async (req, res) => {
       res.status(400);
       throw new Error("Payment not registered");
     }
-    res.redirect("/");
+    res.redirect("/Admin");
   } catch (error) {
     res.status(400).send(error.message);
   }

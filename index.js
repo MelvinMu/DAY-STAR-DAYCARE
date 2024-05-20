@@ -57,7 +57,7 @@ passport.deserializeUser(Adminenter.deserializeUser());
 
 const parentRoutes = require("./routes/ParentRoutes");
 const firstregisterRoutes = require("./routes/firstRoutes");
-const formRoutes = require("./routes/formRoutes");
+
 const sitterRoutes = require("./routes/sitterRoutes");
 const indexRoutes = require("./routes/indexRoutes");
 const AboutRoutes = require("./routes/AboutRoutes");
@@ -74,8 +74,6 @@ const ProcurementRoutes = require("./routes/ProcurementRoutes");
 //use imported routes
 
 app.use("/", parentRoutes);
-
-app.use("/", formRoutes);
 
 app.use("/", firstregisterRoutes);
 
@@ -103,69 +101,7 @@ app.use("/", SitterpayRoutes);
 
 app.use("/", AdminentRoutes);
 
-app.use=("/", ProcurementRoutes);
-
-
-// app.get("/Admin", (req, res) => {
-//   res.render("Admin");
-// });
-
-// app.get("/", (req, res) => {
-// res.send("Homepage! Hello world.");
-// });
-
-// app.get("/about", (req, res) => {
-// res.send("About page. Nice.");
-// });
-
-// //syntax of a route
-// // app.METHOD(PATH, HANDLER);
-
-// app.get("/course", (req, res) => {
-// res.send("You have hit the courses page");
-// });
-
-// app.get('/books/:bookId', (req, res) => {
-// res.send(req.params.bookId);
-// console.log(req.params.bookId)
-// });
-
-// app.get('/students/:name', (req, res) => {
-// res.send( "This is my students name " + req.params.name);
-// });
-
-// app.get("/students/:studentId", (req, res) => {
-// res.send("xx " + req.params.studentId);
-// console.log("studentId " + req.params);
-// });
-
-// //querry params
-// app.get("/students", (req, res) => {
-// res.send("This is class " + req.query.class + "Cohort " + req.query.cohort);
-// });
-
-// app.get("/babies", (req, res) => {
-// res.send("This is a baby " + req.query.name + "age " + req.query.age);
-// });
-
-// app.get("/index", (req, res) => {
-// res.sendFile(__dirname + "/index.html");
-// });
-
-// app.get("/registerbaby", (req, res) => {
-//   res.sendFile(__dirname + "/register_baby.html");
-// });
-
-// app.post("/registerbaby", (req, res) => {
-//   console.log(req.body)
-//   let baby=req.body
-// res.redirect("/index")
-//   res.json({message:"baby registered",baby})
-// })
-
-// app.get("/landing page", (req, res) => {
-//   res.sendFile(__dirname + "/index.html");
-// });
+app.use=("/", ProcurementRoutes)
 
 //For invalid routes
 // app.get("*", (req, res) => {
