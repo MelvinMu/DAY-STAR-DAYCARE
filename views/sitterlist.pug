@@ -30,7 +30,8 @@ html(lang="en")
             th(scope="col") Religion
             th(scope="col") Level of Education
             th(scope="col") Sitter Number
-            th(scope="col") Contact Information
+            th(scope="col") Contact 
+             th(scope="col") status
              th(scope="col") Checkin
             th(scope="col") Delete
             th(scope="col") Update  
@@ -45,14 +46,15 @@ html(lang="en")
             td #{sitter.dob}
             td #{sitter.nin}
             td #{sitter.nextOfKin}
-            td #{sitter.RecommenderName}
+            td #{sitter.recommenderName}
             td #{sitter.gender}
-            td #{sitter.religion} 
+            td #{sitter.Religion} 
             td #{sitter.educationLevel} 
             td #{sitter.sitterNumber} 
             td #{sitter.contact} 
+            td #{sitter.status} 
              td
-              a.btn.btn-danger.btn-sm(href="/Checkin") Checkin 
+              a.btn.btn-danger.btn-sm(href="/sittercheckin/"+ sitter._id) Checkin 
             td 
                     form(method="POST" action="/sitterdelete")
                       input(type="hidden" name="id" value=sitter._id)

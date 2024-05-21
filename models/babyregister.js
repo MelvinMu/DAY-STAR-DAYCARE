@@ -36,6 +36,10 @@ const babySchema = new mongoose.Schema({
     type: String,
     trim: true,
   },
+  status: {
+    type: String,
+    trim: true,
+  },
 });
 
 module.exports = mongoose.model("Baby", babySchema);

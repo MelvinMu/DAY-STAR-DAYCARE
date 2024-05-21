@@ -6,7 +6,7 @@ head
   link(rel='stylesheet' href='/css/register.css')
 .container
   h2 Baby Checkin Form
-  form#registrationForm(action= '/babycheckin?id='+baby._id  method='POST')
+  form#registrationForm(action='/babycheckin?id='+baby._id  method='POST')
     .form-group
       label(for='babyName') Name of Baby:
       input#babyName(type='text' name='babyName' value=baby.babyName)
@@ -41,5 +41,7 @@ head
     .form-group
       label(for='babyNumber') Baby Number:
       input#babyNumber(type='text' name='babyNumber' value=baby.babyNumber)
+    .form-group
+      input#status(type='hidden' name='status'  value= 'Checkedin' )
     input(type='submit' value='Submit')
 script(src='/Js/register.js')

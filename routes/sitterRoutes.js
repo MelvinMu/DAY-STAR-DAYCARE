@@ -111,4 +111,27 @@ router.post("/sitterdelete", async (req, res) => {
   }
 });
 
+
+router.get("/sittercheckin/:id",
+     async (req, res) => {
+        try {
+            const sitterCheckin = await Sitter.findOne({ _id: req.params.id });
+            res.render("sittercheckin", { sitter: sitterCheckin});
+        } catch (error) {
+            console.log("error finding a sitter!", error);
+            res.status(400).send("unable to find baby from the db!");
+        }
+    }
+);
+
+router.post("/sittercheckin", async (req, res) => {
+    try {
+        await Sitter.findOneAndUpdate(
+            { _id: req.query.id }, req.body );
+        res.redirect("/sitterlist");
+    } catch (error) {
+        res.status(404).send("unable to update sitter in the db!");
+    }
+});
+
 module.exports = router;

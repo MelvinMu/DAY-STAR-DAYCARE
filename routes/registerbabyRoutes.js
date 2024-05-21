@@ -93,7 +93,7 @@ router.get("/babylist", async (req, res) => {
   }
 });
 
-//updating a baby in the databas
+//updating a baby in the database
 router.get(
   "/babyupdate/:id",
   async (req, res) => {
@@ -131,6 +131,29 @@ router.post("/babydelete", async (req, res) => {
     console.log("error finding a baby!", error);
     res.status(400).send("unable to find baby from the db!");
   }
+});
+
+//checkin baby route for form in database
+router.get("/babycheckin/:id",
+     async (req, res) => {
+        try {
+            const babyCheckin = await Baby.findOne({ _id: req.params.id });
+            res.render("babycheckin", { baby: babyCheckin});
+        } catch (error) {
+            console.log("error finding a baby!", error);
+            res.status(400).send("unable to find baby from the db!");
+        }
+    }
+);
+
+router.post("/babycheckin", async (req, res) => {
+    try {
+        await Baby.findOneAndUpdate(
+            { _id: req.query.id }, req.body );
+        res.redirect("/babylist");
+    } catch (error) {
+        res.status(404).send("unable to update baby in the db!");
+    }
 });
 
 module.exports = router;
